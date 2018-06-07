@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Link to Google Fonts 
+        font-family: 'VT323', monospace;
+        font-family: 'Bangers', cursive; -->
+    <link href="https://fonts.googleapis.com/css?family=Bangers|VT323" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Drench Game</title>
+</head>
+<body>
+    <img class="img-title" src="title.png" alt="drench game picture">
+    <div class="container">
+        <div class="font-secondary text-center py-1 text-white text-size-md">Use the buttons to change colors. Drench the board with a single color to win the game</div>
+        <div class="d-flex-row-space-evenly"><!-- DIV flexbox container for the table and the buttons container -->
+            <table></table>
+            
+            <div class="small-container d-flex-col-space-evenly"><!-- DIV container for the buttons and num of turns left -->
+                <div class="turns-left text-white text-center font-secondary text-size-md py-1 px-1"><span id="turns_left" class="text-size-lg"></span> moves left to drench the board!</div>
+                <div class="buttons py-2">
+                    <!-- I add to add attribute 'data-color' because Element.style.backgroundColor on Event.target returns an rgb color. -->
+                    <div class="btn-row d-flex-row-space-evenly mb-1">
+                        <button type="button" id="btn-blue" data-color="#8F69E8"></button>
+                        <button type="button" id="btn-yellow" data-color="#F0CC3E"></button>
+                        <button type="button" id="btn-red" data-color="#F03E3E"></button>
+                    </div>
+                    <div class="btn-row d-flex-row-space-evenly">
+                        <button type="button" id="btn-ltblue" data-color="#CCF0CC"></button>
+                        <button type="button" id="btn-green" data-color="#85CC3E"></button>
+                        <button type="button" id="btn-pink" data-color="#F0A8F0"></button>
+                    </div>                    
+                </div> <!-- END of DIV.buttons -->
+            </div><!-- END of DIV .small-container for the buttons and num of turns left -->
+            
+        </div> <!-- END of DIV flexbox container for the table and the buttons container -->
+
+        <div id="win" class="final-message font-primary text-center text-white text-size-xl" style="display: none;">
+                <div class="d-flex-col-space-evenly" style="width: 100%; height: 100%;"> 
+                    <img src="goldcup.jpg" alt="">
+                    <p>Congratulations! You Win!<br>Refresh the page to play again.</p>
+                </div>
+        </div>
+        <div id="lose" class="final-message font-primary text-center text-white text-size-xl" style="display: none;">
+            <p>You Loose!<br>Refresh the page to play again.</p>        
+        </div>
+
+    </div><!-- END of DIV.container -->
+
+    
+    
+<script src="script.js"></script>
+<!-- <script src="test.js"></script> -->
+</body>
+</html>
